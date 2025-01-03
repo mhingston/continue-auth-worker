@@ -36,7 +36,7 @@ The project is organized into the following directories and files:
 ### Prerequisites
 
 *   A Cloudflare account.
-*   A Cloudflare AI Gateway (with [authentication enabled](https://developers.cloudflare.com/ai-gateway/configuration/authentication/) ).
+*   A Cloudflare AI Gateway (with [authentication enabled](https://developers.cloudflare.com/ai-gateway/configuration/authentication/)).
 *   The `wrangler` CLI installed and configured.
 
 ### Configuration
@@ -53,7 +53,7 @@ The project is organized into the following directories and files:
         *   `ApiKeys`: Stores user API keys and their status.
             - Update the binding in [wrangler.toml(https://github.com/mhingston/continue-auth-worker/blob/main/wrangler.toml#L116-L126).
         *   `ProviderSettings`: Stores configuration settings for each provider.
-            - Update the binding in [wrangler.toml](https://github.com/mhingston/continue-auth-worker/blob/main/wrangler.toml#L116-L126).
+            - Update the binding in [wrangler.toml(https://github.com/mhingston/continue-auth-worker/blob/main/wrangler.toml#L116-L126).
 
 3. **API Keys (KV Namespace: `ApiKeys`):**
     *   Add entries for each user who will be using the gateway. The key should be the user's email address, and the value should be a JSON object in the following format:
