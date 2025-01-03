@@ -1,6 +1,6 @@
 # Continue Auth Worker
 
-This project provides a Cloudflare Worker that acts as a proxy server to Cloudflare AI gateway. The particular use case being targetting here is to support a multi-user environment for [Continue](https://www.continue.dev/) AI assistant. By using this worker you can have a setup with per-user API keys which are then swapped out for the upstream provider API key.
+This project provides a Cloudflare Worker that acts as a proxy server to [Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/). The particular use case being targetting here is to support a multi-user environment for [Continue](https://www.continue.dev/) AI assistant. By using this worker you can have a setup with per-user API keys which are then swapped out for the upstream provider API key.
 
 ![image](https://github.com/user-attachments/assets/3fe3f698-1d65-44cf-9a2b-240ed4041425)
 
@@ -36,7 +36,7 @@ The project is organized into the following directories and files:
 ### Prerequisites
 
 *   A Cloudflare account.
-*   A Cloudflare AI Gateway (with [authentication enabled](https://developers.cloudflare.com/ai-gateway/configuration/authentication/)).
+*   A Cloudflare AI Gateway (with [authentication enabled](https://developers.cloudflare.com/ai-gateway/configuration/authentication/) ).
 *   The `wrangler` CLI installed and configured.
 
 ### Configuration
