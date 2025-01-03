@@ -2,6 +2,8 @@
 
 This project provides a Cloudflare Worker that acts as a proxy server to Cloudflare AI gateway. The particular use case being targetting here is to support a multi-user environment for [Continue](https://www.continue.dev/) AI assistant. By using this worker you can have a setup with per-user API keys which are then swapped out for the upstream provider API key.
 
+![image](https://github.com/user-attachments/assets/3fe3f698-1d65-44cf-9a2b-240ed4041425)
+
 ## Features
 
 *   **Unified API:**  Exposes an OpenAI-compatible API for chat and tab completions.
@@ -44,14 +46,14 @@ The project is organized into the following directories and files:
         *   `ACCOUNT_ID`: Your Cloudflare account ID.
         *   `GATEWAY_NAME`: A name for your AI Gateway instance.
         *   `GATEWAY_API_KEY`: The API key for your AI Gateway. (this should be a [secret](https://developers.cloudflare.com/workers/configuration/secrets/))
-        *   You can update the variables in `wrangler.toml`.
+        *   You can update the variables in [wrangler.toml](https://github.com/mhingston/continue-auth-worker/blob/main/wrangler.toml#L116-L126).
 
 2. **KV Namespaces:**
     *   Create two KV namespaces:
         *   `ApiKeys`: Stores user API keys and their status.
-            - Update the binding in `wrangler.toml`.
+            - Update the binding in [wrangler.toml(https://github.com/mhingston/continue-auth-worker/blob/main/wrangler.toml#L116-L126).
         *   `ProviderSettings`: Stores configuration settings for each provider.
-            - Update the binding in `wrangler.toml`.
+            - Update the binding in [wrangler.toml](https://github.com/mhingston/continue-auth-worker/blob/main/wrangler.toml#L116-L126).
 
 3. **API Keys (KV Namespace: `ApiKeys`):**
     *   Add entries for each user who will be using the gateway. The key should be the user's email address, and the value should be a JSON object in the following format:
